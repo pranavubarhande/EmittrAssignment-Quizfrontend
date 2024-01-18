@@ -41,7 +41,7 @@ const Dashboard = () => {
         return false;
     };
     const handleGototest = (lang) => {
-        if(doesExist("english")){
+        if(doesExist(lang)){
             alert("You have already given this test!")
             return;
         }
