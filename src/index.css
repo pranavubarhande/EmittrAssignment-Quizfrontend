@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  flex-direction: row;
+  justify-items: flex-start;
+}
+
+.navbar button {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #ddd;
+  color: black;
+}
