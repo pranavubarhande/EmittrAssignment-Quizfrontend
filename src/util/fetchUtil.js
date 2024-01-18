@@ -1,4 +1,5 @@
-const API_BASE_URL = 'http://192.168.65.56:3333';
+// const API_BASE_URL = 'http://localhost:3333';
+const API_BASE_URL = 'http://ec2-52-66-248-122.ap-south-1.compute.amazonaws.com:3333';
 
 export const client = async (url, method, body) => {
     const complete_url = `${API_BASE_URL}/${url}`;
