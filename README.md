@@ -39,3 +39,13 @@ npm install
 npm start
 
 ```
+
+4. Public AWS URLS:
+```bash
+http://ec2-52-66-248-122.ap-south-1.compute.amazonaws.com:3000/
+
+or 
+
+http://52.66.248.122:3000/
+
+```
