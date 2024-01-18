@@ -92,6 +92,7 @@ const TakeTest = () => {
     }
     return(
         <div style={{display: 'flex', flexDirection: 'row', width: '100%', height: '100%', backgroundColor: 'white', padding: '0px 5px'}}>
+          {/* Test section, consisting of questions list and submit option */}
           <div style={{display:'flex', flexDirection:'column', width:'70%', marginRight:20, marginLeft:20,paddingBottom:'100px'}}>
             <h1 style={{alignSelf:'center'}}>Answer the following questions</h1>
             <button onClick={handleSubmit} style={{marginBottom:20, fontSize:20, border:'1px solid black', borderRadius:20}}>Submit Answers</button>
@@ -99,6 +100,7 @@ const TakeTest = () => {
             <button onClick={handleSubmit} style={{marginBottom:20, fontSize:20, border:'1px solid black', borderRadius:20}}>Submit Answers</button>
 
           </div>
+          {/* Instructions for the user */}
           <div style={{display:'flex', flexDirection:'column', width:'30%' }}>
             <div style={{ display:'flex', flexDirection:'column', border:'1px solid black', borderRadius:20, padding:30, marginBottom:30}}>
                 <h1 style={{alignSelf:'center'}}>Instructions</h1>
@@ -110,6 +112,7 @@ const TakeTest = () => {
             <div>
                 
             </div>
+            {/* Leader board of particular subject test */}
             <div style={{ display:'flex', flexDirection:'column', border:'1px solid black', borderRadius:20, padding:30}}>
                 <h1 style={{alignSelf:'center'}}>Leaderboard: {params.language}</h1>
                 <table id="leaderboard" style={{borderRadius:'20px', width:'100%', padding:'20px'}}>

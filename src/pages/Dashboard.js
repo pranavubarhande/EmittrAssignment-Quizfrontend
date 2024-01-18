@@ -32,7 +32,6 @@ const Dashboard = () => {
         navigate('/sign-in')
     }
     const doesExist = (lang) => {
-        console.log(data?.testhistory);
         
         if (data && Array.isArray(data.testhistory) && data.testhistory.length > 0) {
             return data.testhistory.some(test => test.subject === lang);
@@ -50,23 +49,26 @@ const Dashboard = () => {
     
     return(
         <div style={{display: 'flex', flexDirection: 'column', width: '100%', height: '100%', backgroundColor: 'white', padding: '100px 5px'}}>
+            {/* logout bar */}
             <div style={{display:'flex', justifyContent:'flex-end'}}>
                 <button onClick={logout} style={{borderRadius:10, fontSize:24, marginRight:30}}>Logout</button>
             </div>
             <div style={{display:'flex', flexDirection: 'row', height: 300, width: '100%'}}>
                 <div style={{width: '25%', margin: '10px 5px', backgroundColor: 'white', borderRadius: 10, boxShadow:'0 2px 8px 0 rgba(0, 0, 0, 0.2)', borderRadius: 10, justifyContent: 'center'}}>
-                <div style={{flexDirection: 'column', display: 'flex', justifyContent: 'space-around'}}>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid white', borderRadius: 10, padding: 20}} >
-                        <h3 style={{color:'black', textAlign:'center'}}>Total Tests Taken</h3>
-                        <h3 style={{color:'black'}}>{(!isError && !isLoading) ? data.testsummary.totalTests:0}</h3>
+                    {/* test summary section */}
+                    <div style={{flexDirection: 'column', display: 'flex', justifyContent: 'space-around'}}>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid white', borderRadius: 10, padding: 20}} >
+                            <h3 style={{color:'black', textAlign:'center'}}>Total Tests Taken</h3>
+                            <h3 style={{color:'black'}}>{(!isError && !isLoading) ? data.testsummary.totalTests:0}</h3>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid white', borderRadius: 10, padding: 20}}>
+                            <h3 style={{color:'black', textAlign:'center'}}>Average Marks Scored</h3>
+                            <h3 style={{color:'black'}}>{(!isError && !isLoading) ? data.testsummary.averageScore:0}</h3>
+                        </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid white', borderRadius: 10, padding: 20}}>
-                        <h3 style={{color:'black', textAlign:'center'}}>Average Marks Scored</h3>
-                        <h3 style={{color:'black'}}>{(!isError && !isLoading) ? data.testsummary.averageScore:0}</h3>
-                    </div>
-                </div>
                 
                 </div>
+                {/* test entry section */}
                 <div style={{width: '75%', boxShadow:'0 2px 8px 0 rgba(0, 0, 0, 0.2)', margin: '10px 5px', backgroundColor: 'white', borderRadius: 10, display: 'flex', flexDirection: 'column', alignItems:'center'}}>
                     <h1>Take Test Now</h1>
                     <div
@@ -90,6 +92,7 @@ const Dashboard = () => {
                 </div>
 
             </div>
+            {/* test history section */}
             <div style={{display:'flex', flexDirection: 'row', width: '100%', height: 500}}>
                 
                 <div style={{width: '100%', boxShadow:'0 2px 8px 0 rgba(0, 0, 0, 0.2)', margin: '30px', backgroundColor: 'white', borderRadius: 10, display:'flex', flexDirection:'column', alignItems:'center'}}>
