@@ -1,6 +1,6 @@
 //common fetch utility function that can be used by all services
 // const API_BASE_URL = 'http://localhost:3333';
-const API_BASE_URL = 'http://ec2-52-66-248-122.ap-south-1.compute.amazonaws.com:3333';
+const API_BASE_URL = 'http://ec2-3-109-212-81.ap-south-1.compute.amazonaws.com:3333';
 
 export const client = async (url, method, body) => {
     const complete_url = `${API_BASE_URL}/${url}`;
